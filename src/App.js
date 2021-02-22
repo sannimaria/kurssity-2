@@ -1,6 +1,7 @@
 
 import './App.css';
 import {useState, useEffect} from 'react';
+import Weather from './Weather';
 
 function App() {
 
@@ -26,11 +27,15 @@ useEffect(() => {
 
 
   return (
+    <div className="content">
+      <h3>Your position is</h3>
     <p>
       Position:
       {lat.toFixed(3)},
       {lng.toFixed(3)}
     </p>
+    <Weather lat={lat} lng={lng} />
+    </div>
   );
 
 }
